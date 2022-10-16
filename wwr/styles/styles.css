@@ -1,9 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Neuton:ital@1&display=swap');
 .logo {
     width: 90px;
 }
 
+ #logo_link {
+    padding-top: 5px;
+ }
+
 .icon {
     width: 80px;
+    padding-top: 10px;
 }
 
 header {
@@ -31,6 +37,7 @@ nav a {
     text-align: center;
     color:#C43C1C;
     text-decoration: none;
+    padding: 35px;
 }
 
 nav a:hover {
@@ -55,20 +62,35 @@ main section {
     text-align: center;
 }
 
+main section img {
+    box-sizing: border-box;
+}
+
 #background {
     height: 725px;
 }
 
 body {
     background-color: #F9EDD5;
+    font-family: "Lora", "Roboto", "sans-serif";
+    font-size: 22px;
+    margin: 20px;
+    padding: 0;
+}
+
+h2 {
+    margin: 0;
 }
 
 header {
     background-color: #FCA26E;
+    font-family: "neuton", "arial", "times new roman";
 }
 
 .home-title {
-    color:black;
+    color: #C43C1C;
+    font-size: 2em;
+    margin-top: 10px;
 }
 
 h4 {
@@ -76,34 +98,62 @@ h4 {
 }
 
 .book, .join {
-    color:#C43C1C;
+    color:#F9EDD5;
+    background-color: #C43C1C;
     text-decoration: none;
+    font-size: 18px;
+    padding: 15px 30px;
+    margin-top: 60px;
+    border-radius: 5px;
 }
 
 .book:hover, .join:hover {
     color:#F9EDD5;
-    background-color:#FCA26E;
+    background-color:#C43C1C;
+}
+
+.rivers-card, .camping-card, .rapids-card {
+    margin: 200px 0;
+}
+
+.card-img {
+    border: 10px solid #FCA26E;
+}
+
+.msg {
+    background-color: #FCA26E;
+    line-height: 1.5em;
+    padding: 35px;
+
 }
 
 .msg h2 {
-    color:black;
+    color: black;
     background-color:#FCA26E;
 }
 
 .msg p {
     color: black;
     background-color:#FCA26E;
+    font-family: "Lora", "Roboto", "sans-serif";
+    font-size: .8em;
+    padding-bottom: 15px;
+
 }
 
 footer {
     color: #C43C1C;
     background-color:#FCA26E;
+    padding: 25px 50px;
+    margin-top: 200px;
 }
 
 
 footer a {
     color:#C43C1C;
     text-decoration: none;
+    font-family: "Lora", "Roboto", "sans-serif";
+
 }
 
 footer a:hover {
@@ -117,6 +167,10 @@ footer p {
 
 footer p a:hover {
     text-decoration: underline;
+}
+
+footer .social img {
+    padding-top: 15px;
 }
 
 nav p {
