@@ -1,37 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>JOURNEE</title>
-    <link rel="stylesheet" href="styles/styles.css">
-</head>
+    <link rel="stylesheet" href="styles.css">
 <body>
     <header>
-        <div class="header">
-            <video autoplay loop class="back-video" muted plays-inline>
-                <source src="videos/Bckvideo.mp4" type="back video">
-            </video>
-            <nav>
-                <img src="images/JOURNEE.png" class="logo"
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="lifestyle.html">Lifestyle</a></li>
-                    <li><a href="explore.html">Explore</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+        <div class="bg-img">
+            <div class="container">
+                <div class="topnav">
+            <a class="home" src="index.html">Home</a>
+            <a class="explore" src="explore.html">Explore</a>
+            <a class="lifestyle" src="lifestyle.html">Lifestyle</a>
+            <a class="contact" src="contactus.html">Contact</a>
+                </div>
+            </div>
         </div>
     </header>
-    <main class="info-msg">
+    <main>
+        <div class="purpose">
         <h1> Our Purpose </h1>
-        <p>Our purpose is to make traveling simple and easy by giving you everything you need to know about where you'll be going on your next vacation. We are happy to invite you and others who are interested in traveling the world, Ages 21-70 
+        <p> Our purpose is to make traveling simple and easy by giving you everything you need to know about where you'll be going on your next vacation. We are happy to invite you and others who are interested in traveling the world, Ages 21-70 
             to utilize the quick and easy way to plan your next vacation.
         </p>
-        <section class="home-images">
-            <img src="images/AirplaneWing.jpg" alt="airplane image">
-            <img src="images/SaltedBowl.jpg" alt="salted bowl">
-            <img src="images/Surfing.jpg" alt="surfing">
-        </section>
-        <section class="why-us">
+        </div>
+         <!-- Container for the image gallery -->
+<div class="container">
+
+    <!-- Full-width images with number text -->
+    <div class="mySlides">
+      <div class="numbertext">1 / 6</div>
+        <img src="images/zipline.jpg" style="width:100%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">2 / 6</div>
+        <img src="images/paragliding.jpg" style="width:100%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">3 / 6</div>
+        <img src="images/hiking.jpg" style="width:100%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">4 / 6</div>
+        <img src="images/skydiving.jpg" style="width:100%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">5 / 6</div>
+        <img src="images/snorkeling.jpg" style="width:100%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">6 / 6</div>
+        <img src="images/scubadiving.jpg" style="width:100%">
+    </div>
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+    <!-- Image text -->
+    <div class="caption-container">
+      <p id="Explore the outdoors"></p>
+    </div>
+  
+    <!-- Thumbnail images -->
+    <div class="row">
+      <div class="column">
+        <img class="demo cursor" src="images/zipline.jpg" style="width:100%" onclick="currentSlide(1)" alt="ziplining">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="images/paragliding.jpg" style="width:100%" onclick="currentSlide(2)" alt="Paragliding">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="images/Hiking.jpg" style="width:100%" onclick="currentSlide(3)" alt="Hiking">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="images/Skydiving.jpg" style="width:100%" onclick="currentSlide(4)" alt="Skydiving">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="images/Snorkeling.jpg" style="width:100%" onclick="currentSlide(5)" alt="Snorkeling">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="images/Scubadiving.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+      </div>
+    </div>
+  </div>
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    // Thumbnail image controls
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("demo");
+      let captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+    </script>
+        <div class="why">
             <h2> Why Us?</h2>
             <p>We want to help world travelers with any level of experience achieve their dreams by giving them opportunities to learn about different cultures
                and provide them with the knowledge of foods, music, activities and traditional clothing to help prepare them with their journee around the world. 
@@ -39,15 +129,21 @@
                They want to experience a different part of the world; they want to know more about the cultures and the many different lifestyles and do it without 
                anything to worry about.
             </p>
-        </section>
+        </div>
     </main>
     <footer>
-        <p>Journee &copy; 2022 - Anzehla Wolfley</p>
-            <nav
-                ><p><a href="site-plan.html">Site Plan</a>
-                   <a href="contactus.html">Contact Us</a></p>
-                <div class="social">
-                </div>
+<div class="footer">
+    <div class="contain">
+        <div class="footerp">
+          <div class="bottomnav">
+             <p>Journee &copy; 2022 - Anzehla Wolfley</p>
+             <a class="home" src="index.html">Home</a>
+             <a class="contact" src="contactus.html">Contact</a>
+          </div>
+        </div>
+    </div>
+</div>
+        <div class="social">
             </nav>
             <a href="https://facebook.com" target="_blank">
                 <img src="images/facebook.png" alt="fb icon">
