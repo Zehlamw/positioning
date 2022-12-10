@@ -48,6 +48,18 @@
     color: black;
   }
 
+  .why{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+    text-align: center;
+}
+
+.why, p{
+    width: auto;
+    font-size: larger;
+    text-align: center;
+}
+
 .lifestyle{
     font-family: 'Times New Roman', Times, serif;
     font-size: larger;
