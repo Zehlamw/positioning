@@ -4,132 +4,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>JOURNEE</title>
     <link rel="stylesheet" href="lifestyle.css">
-<body>
-    <header>
-        <div class="bg-img">
-            <div class="container">
-                <div class="topnav">
-            <a class="home" src="index.html">Home</a>
-            <a class="explore" src="explore.html">Explore</a>
-            <a class="lifestyle" src="lifestyle.html">Lifestyle</a>
-            <a class="contact" src="contactus.html">Contact</a>
-                </div>
-            </div>
-        </div>
-    </header>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+          <div class="topnav">
+      <a class="home" src="index.html">Home</a>
+      <a class="explore" src="explore.html">Explore</a>
+      <a class="lifestyle" src="lifestyle.html">Lifestyle</a>
+      <a class="contact" src="contactus.html">Contact</a>
+          <form class="example" action="action_page.php">
+            <input type="text" placeholder="Search here..." name="search">
+          </form>
+          </div>
+  </head>
+  <body>
+    <div class="bgimg-1"></div>
+    <div>
+    <img class="logo" src="images/JOURNEE.jpg" alt="Journee Logo">
+    </div>
+    <div>
+    <img class="lifestyleimg1" src="images/ChineseBuilding.jpg" alt="Chinese BUilding">
+    <img class="lifestyleimg2" src="images/EgyptianLetters.jpg" alt="Egyptian Letters">
+    <img class="lifestyleimg3" src="images/ParadePeople.jpg" alt="Parade people">
+    </div>
+  </body>
     <main>
         <div class="lifestyle">
-            <h1>Lifestyles</h1>
-            <p>Learn about where you'll be going. Discover the culture and get a taste of what it like to live their lifestyle with local clothing and music around!
-            </p>
-    
+        <h1> Lifestyles </h1>
+        <p> Learn about where you'll be going. Discover the culture and get a taste of what it like to live their lifestyle with local clothing and music around!
+        </p>
         </div>
-         <!-- Container for the image gallery -->
-<div class="container">
-
-    <!-- Full-width images with number text -->
-    <div class="mySlides">
-      <div class="numbertext">1 / 6</div>
-        <img src="images/ChineseBuilding.jpg" style="width:100%">
-    </div>
-  
-    <div class="mySlides">
-      <div class="numbertext">2 / 6</div>
-        <img src="images/EgyptianLetters.jpg" style="width:100%">
-    </div>
-  
-    <div class="mySlides">
-      <div class="numbertext">3 / 6</div>
-        <img src="images/EnglandCastle.jpg" style="width:100%">
-    </div>
-  
-    <div class="mySlides">
-      <div class="numbertext">4 / 6</div>
-        <img src="images/EnglandGuard.jpg" style="width:100%">
-    </div>
-  
-    <div class="mySlides">
-      <div class="numbertext">5 / 6</div>
-        <img src="images/FireKnifeDancing.jpg" style="width:100%">
-    </div>
-  
-    <div class="mySlides">
-      <div class="numbertext">6 / 6</div>
-        <img src="images/ParadePeople.jpg" style="width:100%">
-    </div>
-  
-    <!-- Next and previous buttons -->
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-  
-    <!-- Image text -->
-    <div class="caption-container">
-      <p id="Explore the outdoors"></p>
-    </div>
-  
-    <!-- Thumbnail images -->
-    <div class="row">
-      <div class="column">
-        <img class="demo cursor" src="images/ChineseBuilding.jpg" style="width:100%" onclick="currentSlide(1)" alt="China">
-      </div>
-      <div class="column">
-        <img class="demo cursor" src="images/EgyptianLetters.jpg" style="width:100%" onclick="currentSlide(2)" alt="Egyptian writings">
-      </div>
-      <div class="column">
-        <img class="demo cursor" src="images/EnglandCastle.jpg" style="width:100%" onclick="currentSlide(3)" alt="Castle">
-      </div>
-      <div class="column">
-        <img class="demo cursor" src="images/EnglandGuard.jpg" style="width:100%" onclick="currentSlide(4)" alt="Guard">
-      </div>
-      <div class="column">
-        <img class="demo cursor" src="images/FireKnifeDancing.jpg" style="width:100%" onclick="currentSlide(5)" alt="Fire Knife Dance">
-      </div>
-      <div class="column">
-        <img class="demo cursor" src="images/ParadePeople.jpg" style="width:100%" onclick="currentSlide(6)" alt="Parade People">
-      </div>
-    </div>
-  </div>
-  <script>
-    let slideIndex = 1;
-    showSlides(slideIndex);
-    
-    // Next/previous controls
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
-    
-    // Thumbnail image controls
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
-    
-    function showSlides(n) {
-      let i;
-      let slides = document.getElementsByClassName("mySlides");
-      let dots = document.getElementsByClassName("demo");
-      let captionText = document.getElementById("caption");
-      if (n > slides.length) {slideIndex = 1}
-      if (n < 1) {slideIndex = slides.length}
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex-1].style.display = "block";
-      dots[slideIndex-1].className += " active";
-      captionText.innerHTML = dots[slideIndex-1].alt;
-    }
+        
     </script>
-        <div class="why">
-            <h2> Why Us?</h2>
-            <p>We want to help world travelers with any level of experience achieve their dreams by giving them opportunities to learn about different cultures
-               and provide them with the knowledge of foods, music, activities and traditional clothing to help prepare them with their journee around the world. 
-               People will want to come to Journee because they are looking for a special and exciting memory they would want to keep forever.
-               They want to experience a different part of the world; they want to know more about the cultures and the many different lifestyles and do it without 
-               anything to worry about.
-            </p>
-        </div>
     </main>
     <footer>
 <div class="footer">

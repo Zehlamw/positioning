@@ -1,168 +1,146 @@
-.body{
-    background-color:lightblue;
-    color:lightblue;
+.body, html {
+  height: auto;
+}
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Roman New Times", sans-serif;
+  color: rgb(0, 0, 0);
 }
 
-.bg-img {
-    /* The image used */
-    background-image: url("images/JOURNEE.jpg");
-  
-    min-height: 500px;
-  
-    /* Center and scale the image nicely */
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-  
-    /* Needed to position the navbar */
-    position: relative;
-  }
-  
-  /* Position the navbar container inside the image */
-  .container {
-    position: left;
-    margin: 30px;
-    width: auto;
-  }
-  
-  /* The navbar */
-  .topnav {
-    overflow: hidden;
-    background-color: rgb(13, 11, 11);
-    height: 60px;
-  }
-  
-  /* Navbar links */
-  .topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 20px;
-  }
-  
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
+.bgimg-1 {
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.bgimg-1 {
+  background-image: url("images/homeimg1.jpg");
+  height: 300%;
+}
+.container {
+  /* The image used */
+  background-image: url("images/homeimg1.jpg");
 
+  /* Full height */
+  height: 100%;
+  width: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%}
+
+/* The navbar */
+.topnav {
+  overflow: hidden;
+  background-color: rgb(0, 0, 0);
+  height: 70px;
+}
+
+/* Navbar links */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* Style the search field */
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 20px;
+  float: right;
+  height: 73px;
+  width: auto;
+  color:#ffffff;
+  background: #242424;
+}
+
+form.example {
+  background: #000000;
+}
+
+/* Clear floats */
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.logo{
+  width: 600px;
+  height: 300px;
+  position: absolute;
+  top: 13%;
+  left: 34%;
+}
 .purpose{
     font-family: 'Times New Roman', Times, serif;
-    font-size: larger;
+    font-size: 25px;
     text-align: center;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .purpose, p{
     width: auto;
 }
 
+.homeimg1{
+  width: 700px;
+  height: 600px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+}
+.homeimg2{
+  width: 700px;
+  height: 850px;
+  position: absolute;
+  top: 125%;
+  left: 11%;
+}
+.homeimg3{
+  width: 700px;
+  height: 600px;
+  position: absolute;
+  top: 172%;
+  left: 50%;
+}
+
 .why{
     font-family: 'Times New Roman', Times, serif;
-    font-size: larger;
+    font-size: 25px;
     text-align: center;
+    position: absolute;
+    top: 274%;
+    left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.why, p{
+  width: auto;
 }
 
 .footer{
     font-family: 'Times New Roman', Times, serif;
     font-size: larger;
     text-align: left;
-}
-
-  *{
-    box-sizing: border-box;
-  }
-  
-  /* Position the image container (needed to position the left and right arrows) */
-  .container {
-    position: relative;
-  }
-  
-  /* Hide the images by default */
-  .mySlides {
-    display: none;
-  }
-  
-  /* Add a pointer when hovering over the thumbnail images */
-  .cursor {
-    cursor: pointer;
-  }
-  
-  /* Next & previous buttons */
-  .prev,
-  .next {
-    cursor: pointer;
-    position: absolute;
-    top: 40%;
-    width: auto;
-    padding: 16px;
-    margin-top: -50px;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    -webkit-user-select: none;
-  }
-  
-  /* Position the "next button" to the right */
-  .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-  
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover,
-  .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-  
-  /* Number text (1/3 etc) */
-  .numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-  }
-  
-  /* Container for image text */
-  .caption-container {
-    text-align: center;
-    background-color: #222;
-    padding: 4px 32px;
-    color: white;
-  }
-  
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  /* Six columns side by side */
-  .column {
-    float: left;
-    width: 16.66%;
-  }
-  
-  /* Add a transparency effect for thumnbail images */
-  .demo {
-    opacity: 0.6;
-  }
-  
-  .active,
-  .demo:hover {
-    opacity: 1;
-  }
-
-  .contain {
-    position: right;
-    margin: 30px;
-    width: auto;
-  }
-  
+}  
 .footerp{
     color:#ddd;
     font-size: 20px;

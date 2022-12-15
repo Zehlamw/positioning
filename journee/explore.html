@@ -4,124 +4,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>JOURNEE</title>
     <link rel="stylesheet" href="explore.css">
-<body>
-    <header>
-        <div class="bg-img">
-            <div class="container">
-                <div class="topnav">
-            <a class="home" src="index.html">Home</a>
-            <a class="explore" src="explore.html">Explore</a>
-            <a class="lifestyle" src="lifestyle.html">Lifestyle</a>
-            <a class="contact" src="contactus.html">Contact</a>
-                </div>
-            </div>
-        </div>
-    </header>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+          <div class="topnav">
+      <a class="home" src="index.html">Home</a>
+      <a class="explore" src="explore.html">Explore</a>
+      <a class="lifestyle" src="lifestyle.html">Lifestyle</a>
+      <a class="contact" src="contactus.html">Contact</a>
+          <form class="example" action="action_page.php">
+            <input type="text" placeholder="Search here..." name="search">
+          </form>
+          </div>
+  </head>
+  <body>
+    <div class="bgimg-1"></div>
+    <div>
+    <img class="logo" src="images/JOURNEE.jpg" alt="Journee Logo">
+    </div>
+    <div>
+    <img class="exploreimg1" src="images/paragliding.jpg" alt="Paragliding">
+    <img class="exploreimg2" src="images/scubadiving.jpg" alt="scubadiving">
+    <img class="exploreimg3" src="images/zipline.jpg" alt="Ziplining">
+    </div>
+  </body>
     <main>
         <div class="explore">
-            <h1>Explore</h1>
-            <p>Most people worry about their budget and what they can fit into it while on vacation. Some may ask, where can I find great food and what
-                is there around that is fun, that I can fill my time with? Let me tell you that all you need to prepare for is your budget and your destination.
-                We will take care of the rest! Let us know where you want to go and we will provide you with great food choices, activities, give you a hint of 
-                music you might hear or clothing that the local people will be wearing. We have it all and it's all for you!    
+        <h1> Explore </h1>
+        <p> Most people worry about their budget and what they can fit into it while on vacation. Some may ask, where can I find great food and what
+          is there around that is fun, that I can fill my time with? Let me tell you that all you need to prepare for is your budget and your destination.
+          We will take care of the rest! Let us know where you want to go and we will provide you with great food choices, activities, give you a hint of 
+          music you might hear or clothing that the local people will be wearing. We have it all and it's all for you!
         </p>
         </div>
-         <!-- Container for the image gallery -->
-<div class="container">
-
-    <!-- Full-width images with number text -->
-    <div class="mySlides">
-      <div class="numbertext">1 / 6</div>
-        <img src="images/zipline.jpg" style="width:100%">
-    </div>
-  
-    <div class="mySlides">
-      <div class="numbertext">2 / 6</div>
-        <img src="images/paragliding.jpg" style="width:100%">
-    </div>
-  
-    <div class="mySlides">
-      <div class="numbertext">3 / 6</div>
-        <img src="images/hiking.jpg" style="width:100%">
-    </div>
-  
-    <div class="mySlides">
-      <div class="numbertext">4 / 6</div>
-        <img src="images/skydiving.jpg" style="width:100%">
-    </div>
-  
-    <div class="mySlides">
-      <div class="numbertext">5 / 6</div>
-        <img src="images/snorkeling.jpg" style="width:100%">
-    </div>
-  
-    <div class="mySlides">
-      <div class="numbertext">6 / 6</div>
-        <img src="images/scubadiving.jpg" style="width:100%">
-    </div>
-  
-    <!-- Next and previous buttons -->
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-  
-    <!-- Image text -->
-    <div class="caption-container">
-      <p id="Explore the outdoors"></p>
-    </div>
-  
-    <!-- Thumbnail images -->
-    <div class="row">
-      <div class="column">
-        <img class="demo cursor" src="images/zipline.jpg" style="width:100%" onclick="currentSlide(1)" alt="ziplining">
-      </div>
-      <div class="column">
-        <img class="demo cursor" src="images/paragliding.jpg" style="width:100%" onclick="currentSlide(2)" alt="Paragliding">
-      </div>
-      <div class="column">
-        <img class="demo cursor" src="images/Hiking.jpg" style="width:100%" onclick="currentSlide(3)" alt="Hiking">
-      </div>
-      <div class="column">
-        <img class="demo cursor" src="images/Skydiving.jpg" style="width:100%" onclick="currentSlide(4)" alt="Skydiving">
-      </div>
-      <div class="column">
-        <img class="demo cursor" src="images/Snorkeling.jpg" style="width:100%" onclick="currentSlide(5)" alt="Snorkeling">
-      </div>
-      <div class="column">
-        <img class="demo cursor" src="images/Scubadiving.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
-      </div>
-    </div>
-  </div>
-  <script>
-    let slideIndex = 1;
-    showSlides(slideIndex);
-    
-    // Next/previous controls
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
-    
-    // Thumbnail image controls
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
-    
-    function showSlides(n) {
-      let i;
-      let slides = document.getElementsByClassName("mySlides");
-      let dots = document.getElementsByClassName("demo");
-      let captionText = document.getElementById("caption");
-      if (n > slides.length) {slideIndex = 1}
-      if (n < 1) {slideIndex = slides.length}
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex-1].style.display = "block";
-      dots[slideIndex-1].className += " active";
-      captionText.innerHTML = dots[slideIndex-1].alt;
-    }
+        <div class="jtext">
+          <p>Find Your Journee</p>
+        </div>
     </script>
     </main>
     <footer>
